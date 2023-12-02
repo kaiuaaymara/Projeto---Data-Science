@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/graficos.css">
+    <link rel="stylesheet" href="../css/barranavegacao.css">
+    <script src="../js/graficos.js"></script> 
+</head>
+
+<body>
+
+
+    <nav> 
+        <ul class="barranav">
+            <li class = "itembarranav"><a href="../index.html">Login</a></li>
+            <li class = "itembarranav"><a href="../html/teladeconfirmacao.html">Tela de Confirmação</a></li>
+            <li class = "itembarranav"><a href="../html/graficos.html">Gráficos</a></li>
+        </ul> 
+    </nav>
+
+    <div class="background-image"></div>
+
+    <div> 
+        <div class="divgraficos">
+            <label for="graficos">Escolha um gráfico:</label>
+            <div>
+            <select id="selectgraficos" onChange="showHide()">
+                <option value="nacionalidades">Nacionalidades que mais viajam</option>
+                <option value="atrasosmes">Meses com maior número de vôos atrasados</option>
+                <option value="cancelamentosmes">Meses com maior número de vôos cancelados</option>
+                <option value="audi"></option>
+            </select> 
+        </div>
+
+            
+        </div>
+
+        <div class="imagensgraficos" id = "imagensgraficos">
+            <img src="../assets/img/graphs-3-01.png" id="grafico1" class="imagemgraficos"/>
+            <img src="../assets/img/p09xd6t1.png" id="grafico2" class="imagemgraficos"/>
+            
+         </div>
+
+    </div>
+</body>
