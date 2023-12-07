@@ -1,3 +1,4 @@
+import flask
 from flask import Flask, jsonify, request, url_for, render_template
 import joblib
 import keras
@@ -23,14 +24,14 @@ mapeamento_aeroportos = {
 # Função para prever o status do voo
 
 
-@app.route("/")
-def index():
-    return render_template('index.html')
-
-
 @app.route("/graficos")
 def graficos():
     return render_template('graficos.html')
+
+
+@app.route("/")
+def index():
+    return flask.redirect('graficos', 302)
 
 
 @app.route("/teladeconfirmacao")
@@ -39,7 +40,8 @@ def teladeconfirmacao():
 
 
 def prever_status_voo(dados_voo):
-    modelo = joblib.load("modelo_voos.pkl")
+
+    modelo = joblib.load('modelo_voos.pkl')
     # Suponha que 'piloto', 'aeroporto' e 'data' são chaves nos dados do voo
     piloto_numerico = mapeamento_pilotos.get(dados_voo['piloto'])
     aeroporto_numerico = mapeamento_aeroportos.get(dados_voo['aeroporto'])
@@ -69,8 +71,6 @@ def predict():
 
     return jsonify({'piloto': piloto, 'aeroporto': aeroporto, 'data': data,
                     'status': status, 'status_previsto': piloto_numerico})
-
-
 
 
 if __name__ == '__main__':

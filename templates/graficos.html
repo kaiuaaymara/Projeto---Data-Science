@@ -14,9 +14,8 @@
 
     <nav> 
         <ul class="barranav">
-            <li class = "itembarranav"><a href="../index.html">Login</a></li>
-            <li class = "itembarranav"><a href="../html/teladeconfirmacao.html">Tela de Confirmação</a></li>
-            <li class = "itembarranav"><a href="../html/graficos.html">Gráficos</a></li>
+            <li class = "itembarranav"><a href="{{url_for('teladeconfirmacao')}}">Tela de Confirmação</a></li>
+            <li class = "itembarranav"><a href="{{url_for('graficos')}}">Gráficos</a></li>
         </ul> 
     </nav>
 
@@ -33,7 +32,7 @@
                 <option value="aeroportostempo">Aeroportos com maior número de vôos no tempo</option>
                 <option value="aeroportoscancelados">Aeroportos com maior número de vôos cancelados</option>
                 <option value="aeroportosatraso">Aeroportos com maior número de vôos atrasados</option>
-                <option value="distribuicaoaeroportos">Distrubuição de vôos por aeroporto</option>
+                <option value="distribuicaoaeroportos">Distrubuição de aeroportos por continente</option>
                 <option value="Departure_Date">Número de vôos por mês</option>
             </select> 
         </div>
