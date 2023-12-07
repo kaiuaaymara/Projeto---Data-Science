@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/graficos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/barranavegacao.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/teladeconfirmacao.css') }}">
+    <title>Flight Status</title>
+</head>
+<body>
+
+    <nav> <ul class="barranav">
+        <li class = "itembarranav"><a href="../index.html">Login</a></li>
+        <li class = "itembarranav"><a href="../html/teladeconfirmacao.html">Tela de Confirmação</a></li>
+        <li class = "itembarranav"><a href="../html/graficos.html">Gráficos</a></li>
+    </ul> </nav>
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags, title, links to stylesheets -->
+</head>
+
+<body>
+
+    <!-- barra de navegação e outras partes do seu layout -->
+
+    <div class="informacoes">
+        <div class="background-image"></div>
+        <div class="flight-information">
+            <!-- outras informações do voo -->
+            
+            <form id="confirmationForm">
+                <label for="pilotoSelect">Selecione o Piloto:</label>
+                <select id="pilotoSelect">
+                    <option value="piloto1">Perry Burhose</option>
+                    <option value="piloto2">Aaren Greenzf</option>
+                    <option value="piloto3">Aaren Horing</option>
+                    <option value="piloto4">Aaren kohnen</option>
+                    <option value="piloto5">Aaren Lattka</option>
+                    <option value="piloto6">Aaren tours</option>
+                    <option value="piloto7">Damian garnsey</option>
+                    <option value="piloto8">Rance Evetts</option>
+                    <option value="piloto9">Aaren Ayre</option>
+                    <option value="piloto10">Aaren Boyse</option>
+                    <option value="piloto11">Aaren Thrussel</option>
+                    <option value="piloto12">Aaren Walkigshaw</option>
+                    <!-- Adicione mais opções de pilotos aqui conforme necessário -->
+                </select>
+
+                <label for="aeroportoSelect">Selecione o Aeroporto:</label>
+                <select id="aeroportoSelect">
+                    <option value="aeroporto1">Aeroporto 1</option>
+                    <option value="aeroporto2">Aeroporto 2</option>
+                    <!-- Adicione mais opções de aeroportos aqui conforme necessário -->
+                </select>
+
+                <label for="dataInput">Selecione a Data:</label>    
+                <select id="dataInput">
+                    <option value="data1">1</option>
+                    <option value="data1">2</option>
+                    <option value="data1">3</option>
+                    <option value="data1">4</option>
+                    <option value="data1">5</option>
+                    <option value="data1">6</option>
+                    <option value="data1">7</option>
+                    <option value="data1">8</option>
+                    <option value="data1">9</option>
+                    <option value="data1">10</option>
+                    <option value="data1">11</option>
+                    <option value="data1">12</option>
+                <input type="submit" value="Confirmar">
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/teladeconfirmacao.js') }}"></script>
+</body>
+
+</html>
+
+
+    <div class="informacoes">
+    <div class="background-image"></div>
+    <div class="flight-information">
+        <div class="information">Informações Do Voo</div>
+        <div class="flight-airport">Aeroporto:</div>
+        <div class="flight-time">Horário Do Voo:</div>
+        <div class="flight-status">Status Do Voo:</div>
+
+        </div>
+    </div>
+</body>
+
+</html>

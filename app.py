@@ -1,7 +1,10 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, url_for, render_template
 import joblib
+import keras
+import pickle
 
 app = Flask(__name__)
+
 
 # Suponha que estes são os mapeamentos de pilotos e aeroportos para valores numéricos
 mapeamento_pilotos = {
@@ -18,6 +21,23 @@ mapeamento_aeroportos = {
 }
 
 # Função para prever o status do voo
+
+
+@app.route("/")
+def index():
+    return render_template('index.html')
+
+
+@app.route("/graficos")
+def graficos():
+    return render_template('graficos.html')
+
+
+@app.route("/teladeconfirmacao")
+def teladeconfirmacao():
+    return render_template('teladeconfirmacao.html')
+
+
 def prever_status_voo(dados_voo):
     modelo = joblib.load("modelo_voos.pkl")
     # Suponha que 'piloto', 'aeroporto' e 'data' são chaves nos dados do voo
@@ -28,6 +48,7 @@ def prever_status_voo(dados_voo):
     # (substitua esta lógica pela utilização correta no seu modelo)
     # Retornamos os valores numéricos apenas para demonstração
     return piloto_numerico, aeroporto_numerico
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -48,6 +69,9 @@ def predict():
 
     return jsonify({'piloto': piloto, 'aeroporto': aeroporto, 'data': data,
                     'status': status, 'status_previsto': piloto_numerico})
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

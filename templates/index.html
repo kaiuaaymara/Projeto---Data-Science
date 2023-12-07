@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIRDATAHUB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="content">
+        <h1 class="title">AIRDATAHUB</h1>
+
+        <div class="form-container">
+            <form action="teladeconfirmacao.html">
+                <label for="input1">USUÁRIO</label>
+                <input type="text" id="input1" />
+
+                <label for="input2">SENHA</label>
+                <input type="text" id="input2" />
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script defer src= '../js/teladeconfirmacao.js'></script>
+</body>
+</html>
