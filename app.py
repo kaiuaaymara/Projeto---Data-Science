@@ -2,7 +2,6 @@ import flask
 from flask import Flask, jsonify, request, url_for, render_template
 import joblib
 import keras
-import pickle
 
 app = Flask(__name__)
 
@@ -16,8 +15,10 @@ mapeamento_pilotos = {
 }
 
 mapeamento_aeroportos = {
-    'Aeroporto 1': 1,
-    'Aeroporto 2': 2,
+    'Kiung Aiport':3144,
+    'Mae Hong son Airoport':322,
+    'Capital city Airoport':18554,
+    'Angzhou Airoport':1621
     # Adicione mais aeroportos e seus valores numéricos conforme necessário
 }
 
